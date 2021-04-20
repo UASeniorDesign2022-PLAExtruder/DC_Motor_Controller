@@ -3,8 +3,14 @@
 *.map
 *.d
 *.bak
+/nbproject/private
+*/nbproject/private
 **/nbproject/private
+/nbproject/Makefile-*
+*/nbproject/Makefile-*
 **/nbproject/Makefile-*
+/nbproject/Package-*
+*/nbproject/Package-*
 **/nbproject/Package-*
 **/.mhc_backup
 **/*.X/debug
