@@ -28,8 +28,8 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef XC_HEADER_TEMPLATE_H
-#define	XC_HEADER_TEMPLATE_H
+#ifndef CONFIG_H
+#define	CONFIG_H
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 // [ PIC16F877A ] Configuration Bit Settings
@@ -48,5 +48,5 @@
 #pragma config CP = OFF   // Flash Program Memory Code Protection bit (Code protection off)
 
 
-#endif	/* XC_HEADER_TEMPLATE_H */
+#endif
 
