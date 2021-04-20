@@ -41,7 +41,7 @@ uint16_t setDutyCyclePWM1(uint16_t DC)
     return DC;
 }
 
-uint16_t nudgeDutyCyclePWM1(uint16_t duty_current, uint16_t duty_change)
+uint16_t nudgeDutyCyclePWM1(short duty_current, signed short duty_change)
 {
     uint16_t DC = 0;
     if (duty_current + duty_change > 1024)
