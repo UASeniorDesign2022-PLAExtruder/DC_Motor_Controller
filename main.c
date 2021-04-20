@@ -35,7 +35,6 @@ int main(void)
   
   while(1)
   {
-
     if (DUTY_CYCLE_ZERO)
         duty_cycle = setDutyCyclePWM1(0);
 
@@ -57,7 +56,6 @@ int main(void)
 
     __delay_ms(10);
   }
-
   return 1;
 }
 

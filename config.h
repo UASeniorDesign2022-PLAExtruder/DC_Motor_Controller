@@ -1,52 +1,32 @@
-/* Microchip Technology Inc. and its subsidiaries.  You may use this software 
- * and any derivatives exclusively with Microchip products. 
- * 
- * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS".  NO WARRANTIES, WHETHER 
- * EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED 
- * WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A 
- * PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION 
- * WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION. 
- *
- * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
- * INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
- * WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS 
- * BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE 
- * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS 
- * IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF 
- * ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *
- * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
- * TERMS. 
- */
 
-/* 
- * File:   
- * Author: 
- * Comments:
- * Revision history: 
+/*
+ * Senior Design Project 8-Bit Motor Controller Prototype
+ * DC motor control via H-bridge / PWM 
+ * Written for PIC16F877A
+ * File:   config.h
+ * Author: wilson
+ *
+ * Created on April 19, 2021, 11:25 PM
  */
-
-// This is a guard condition so that contents of this file are not included
-// more than once.  
+  
 #ifndef CONFIG_H
 #define	CONFIG_H
 
-#include <xc.h> // include processor files - each processor file is guarded.  
-// [ PIC16F877A ] Configuration Bit Settings
-// #pragma config statements should precede project file includes.
-// Use project enums instead of #define for ON and OFF.
-// CONFIG
-#pragma config FOSC = XT  // Oscillator Selection bits (XT oscillator)
-#pragma config WDTE = OFF // Watchdog Timer Enable bit (WDT disabled)
-#pragma config PWRTE = ON // Power-up Timer Enable bit (PWRT enabled)
-#pragma config BOREN = ON // Brown-out Reset Enable bit (BOR enabled)
-#pragma config LVP = OFF  // Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit
-                          // (RB3 is digital I/O, HV on MCLR must be used for programming)
-#pragma config CPD = OFF  // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off)
-#pragma config WRT = OFF  // Flash Program Memory Write Enable bits 
-                          // (Write protection off; all program memory may be written to by EECON control)
-#pragma config CP = OFF   // Flash Program Memory Code Protection bit (Code protection off)
+    #include <xc.h>
 
+    // PIC16F877A configuration bits
+    // #pragma config statements should precede project file includes
+    // use project enums instead of #define for ON and OFF
+
+    #pragma config FOSC = XT    // oscillator selection bits (XT oscillator)
+    #pragma config WDTE = OFF   // WDT enable bit (disabled)
+    #pragma config PWRTE = ON   // power-up timer enable bit (PWRT enabled)
+    #pragma config BOREN = ON   // brown-out reset enable bit (BOR enabled)
+    #pragma config LVP = OFF    // low-voltage (single-supply) in-circuit serial programming enable bit
+                                // (RB3 is digital I/O, HV on MCLR must be used for programming)
+    #pragma config CPD = OFF    // data EEPROM memory code protection bit (data EEPROM code protection off)
+    #pragma config WRT = OFF    // flash program memory write enable bits 
+                                // (write protection off, all program memory may be written to by EECON control)
+    #pragma config CP = OFF     // flash program memory code protection bit (code protection off)
 
 #endif
-
